@@ -1,5 +1,11 @@
 const path = require('path')
-const webpack = require('webpack')
+const fs = require('fs')
+const lessToJs = require('less-vars-to-js')
+
+const themeVariables = lessToJs(fs.readFileSync(path.join(__dirname, 'src', 'theme', 'ant-theme-vars.less'), 'utf8'))
+
+
+console.log(themeVariables);
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
@@ -37,7 +43,7 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react']
+            presets: ['@babel/preset-env', '@babel/preset-react'],
           },
         }
       },
@@ -52,6 +58,7 @@ module.exports = {
             options: {
               lessOptions: {
                 javascriptEnabled: true,
+                modifyVars: themeVariables,
               }
             },
           },
