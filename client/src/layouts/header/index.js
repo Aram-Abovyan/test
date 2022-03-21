@@ -3,13 +3,19 @@ import React from 'react'
 // antd
 import { Menu } from 'antd'
 
-const Header = ({ menuItems }) => {
+const Header = ({
+  content,
+  currentItem,
+  setCurrentItem,
+}) => {
   return (
     <Menu
       mode="horizontal"
       theme="dark"
+      defaultSelectedKeys={[currentItem]}
+      onClick={e => setCurrentItem(e.key)}
     >
-      {menuItems}
+      {content}
     </Menu>
   )
 }

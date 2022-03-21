@@ -8,15 +8,13 @@ import {
 // pages
 import {
   HomePage,
-  AuthorizationPage,
-  Test, // page for component testing
+  AuthPage,
 } from '../pages'
 
 const AppRoutes = () => (
   <Routes>
     <Route path="/" element={<HomePage />} />
-    <Route path="/authorization" element={<AuthorizationPage />} />
-    <Route path="/test" element={<Test />} />
+    <Route path="/auth" element={<AuthPage />} />
   </Routes>
 )
 

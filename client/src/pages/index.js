@@ -1,10 +1,7 @@
 import HomePage from './home'
-import AuthorizationPage from './authorization'
-// page for component testing
-import Test from './temp'
+import AuthPage from './auth'
 
 export {
   HomePage,
-  AuthorizationPage,
-  Test,
+  AuthPage,
 }

@@ -1,10 +1,13 @@
 // react
 import React from 'react'
 // antd
+import { Row } from 'antd'
 
-const Main = () => {
+const Main = ({ content }) => {
   return (
-    <h1>main</h1>
+    <Row>
+      {content}
+    </Row>
   )
 }
 
