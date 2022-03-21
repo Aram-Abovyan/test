@@ -1,0 +1,4 @@
+{
+  "watch": ["webpack.config.js", "src/theme/ant-theme-vars.less"],
+  "exec": "webpack serve"
+}
